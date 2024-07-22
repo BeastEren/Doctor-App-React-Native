@@ -51,7 +51,7 @@ export default function NearbyDoctors() {
 const styles = StyleSheet.create({
     wrapper: {
         borderRadius: 30,
-        paddingVertical: 18,
+        paddingVertical: 20,
         paddingHorizontal: 18,
         width: '95%',
         backgroundColor: '#f5f5f5',
