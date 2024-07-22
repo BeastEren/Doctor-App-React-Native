@@ -55,6 +55,7 @@ const styles = StyleSheet.create({
         paddingHorizontal: 18,
         width: '95%',
         backgroundColor: '#f5f5f5',
+        elevation: 10,
     },
     nearbyDocText: {
         fontWeight: 'bold',
@@ -67,6 +68,7 @@ const styles = StyleSheet.create({
         height: 72,
         flexDirection: 'row',
         backgroundColor: 'white',
+        elevation: 20,
     },
     docProfilePic: {
         marginLeft: 20,

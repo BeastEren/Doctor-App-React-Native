@@ -53,6 +53,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         backgroundColor: 'white',
         marginBottom: 10,
+        elevation: 10,
     },
     icon: {
         alignItems: 'center',
