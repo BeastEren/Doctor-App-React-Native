@@ -8,7 +8,7 @@ type propType = {
     icon: any
 }
 
-export default function SearchDoctorTab(prop: propType) {
+export default function Test(prop: propType) {
 
     const [selectedData, setSelectedData] = useState('');
     const [isClicked, setIsClicked] = useState(false);
@@ -90,7 +90,7 @@ const styles = StyleSheet.create({
     speciality: {
         alignItems: 'center',
         height: 68,
-        borderRadius: 40,
+        borderRadius: 20,
         borderWidth: 2,
         borderColor: '#b1d7e4',
         paddingHorizontal: 10,
@@ -98,6 +98,7 @@ const styles = StyleSheet.create({
         backgroundColor: 'white',
         marginBottom: 10,
         elevation: 10,
+
     },
     icon: {
         alignItems: 'center',
