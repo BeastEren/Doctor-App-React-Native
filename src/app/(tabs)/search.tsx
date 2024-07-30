@@ -8,6 +8,7 @@ import NearbyDoctors from '@/components/NearbyDoctors';
 import SearchDoctorTab from '@/components/SearchDoctorTab';
 import PreviousDoctors from '@/components/PreviousDoctors';
 import Test from '@/components/Test';
+import { backgroundColorBottom, backgroundColorTop } from '@/constants/Colors';
 
 const dataList1 = [
     { value: 'sourav', code: '3123' },
@@ -38,7 +39,7 @@ export default function search() {
 
     return (
         <ScrollView >
-            <LinearGradient colors={['#eff8ff', '#e2e1f1']} style={styles.wrapper}>
+            <LinearGradient colors={[backgroundColorTop, backgroundColorBottom]} style={styles.wrapper}>
                 <View style={styles.topBar}>
                     <Text style={styles.serchText}>Search Doctor</Text>
                     <Pressable>
@@ -87,7 +88,6 @@ export default function search() {
 
 const styles = StyleSheet.create({
     wrapper: {
-        // Nothing came to mind
         paddingTop: 32
     },
     topBar: {
@@ -95,7 +95,6 @@ const styles = StyleSheet.create({
         paddingHorizontal: 10,
         flexDirection: 'row',
         justifyContent: 'space-between',
-        // alignItems:'center',
     },
     serchText: {
         fontSize: 25,
@@ -104,13 +103,11 @@ const styles = StyleSheet.create({
     findDocButton: {
         marginTop: 20,
         width: '88%',
-        // backgroundColor: 'black'
     },
     cancelButton: {
         marginVertical: 30,
         alignItems: 'center',
         justifyContent: 'center',
-        // backgroundColor: 'black'
     },
     cancelText: {
         color: 'blue',

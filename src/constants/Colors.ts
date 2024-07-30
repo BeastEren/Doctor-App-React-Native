@@ -24,3 +24,17 @@ export const Colors = {
     tabIconSelected: tintColorDark,
   },
 };
+
+export const borderColor = '#afd6e1';
+export const backgroundColorTop = '#eff8ff';
+export const backgroundColorBottom = '#e2e1f1';
+export const bottonColor = '#abd8e8';
+export const cardsBackgroundColor = '#f5f5f5';
+export const bottomTabActivateColor = '#e8def7';
+
+// #afd6e1: border color
+// #eff8ff: background color top
+// #e2e1f1: background color bottom
+// #abd8e8: botton color
+// #f5f5f5: cards background color
+// #e8def7: bottom tab activate color

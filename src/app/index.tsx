@@ -8,6 +8,12 @@ export default function Index() {
       <Button text={"Press"} onPress={() => {
         router.push('/(tabs)/search');
       }} />
+      <Button text={"Login"} onPress={() => {
+        router.push('/login');
+      }} />
+      <Button text={"signup"} onPress={() => {
+        router.push('/signup');
+      }} />
     </View>
   );
 }

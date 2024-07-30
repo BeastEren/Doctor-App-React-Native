@@ -24,7 +24,7 @@ export default function SearchDoctorTab(prop: propType) {
             setData(prop.dataList);
         }
     }
-    // const searchRef = useRef();
+    const searchRef = useRef();
 
     return (
         <View style={styles.wrapper}>
@@ -78,7 +78,6 @@ export default function SearchDoctorTab(prop: propType) {
                     />
                 </View>
             ) : null}
-
         </View>
     )
 }
@@ -116,16 +115,17 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
     },
     dropdown: {
-        width: '90%',
+        width: '95%',
         height: 300,
         backgroundColor: 'white',
-        elevation: 10,
+        elevation: 15,
         borderRadius: 30,
         borderWidth: 1,
         borderColor: '#b1d7e4',
         alignSelf: 'center',
-        // position: 'absolute',
-        // marginTop: 70,
+        position: 'absolute',
+        marginTop: 70,
+        zIndex: 999,
     },
     searchBar: {
         width: '90%',
