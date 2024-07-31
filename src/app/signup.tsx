@@ -10,7 +10,6 @@ export default function login() {
   return (
     <ScrollView style={styles.wrapper}>
       <NavBar />
-      <SearchBar />
       <LinearGradient
         colors={[backgroundColorTop, backgroundColorBottom]}
         style={styles.topBar}

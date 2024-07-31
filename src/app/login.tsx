@@ -14,7 +14,6 @@ export default function login() {
                 style={styles.topBar}
             >
                 <NavBar />
-                <SearchBar />
             </LinearGradient>
             <LinearGradient
                 colors={[backgroundColorBottom, backgroundColorTop]}
@@ -38,6 +37,7 @@ export default function login() {
                     width: '60%',
                 }}>
                     <Button onPress={() => {
+                        router.push('/(tabs)/home');
                     }} text="Login" />
                 </View>
                 <View style={styles.orView}>
