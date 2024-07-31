@@ -1,6 +1,5 @@
-import { Pressable, StyleSheet, Text, View, TextInput, FlatList } from 'react-native'
-import { useRef, useState } from 'react'
-import { AntDesign, EvilIcons } from '@expo/vector-icons';
+import { Pressable, StyleSheet, Text, View, TextInput, FlatList } from 'react-native';
+import { useRef, useState } from 'react';
 
 type propType = {
     name: string,
@@ -74,8 +73,7 @@ export default function SearchDoctorTab(prop: propType) {
                                 <Text>{item.value}</Text>
                             </Pressable>
                         )
-                    }}
-                    />
+                    }} />
                 </View>
             ) : null}
         </View>
