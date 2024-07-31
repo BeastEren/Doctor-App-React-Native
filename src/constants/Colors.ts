@@ -25,12 +25,17 @@ export const Colors = {
   },
 };
 
-export const borderColor = '#afd6e1';
-export const backgroundColorTop = '#eff8ff';
-export const backgroundColorBottom = '#e2e1f1';
+export const borderColor = '#a5bfcb';
+export const backgroundColorTop = '#a5cff5';
+export const backgroundColorBottom = '#ded0f3';
+
 export const bottonColor = '#abd8e8';
 export const cardsBackgroundColor = '#f5f5f5';
 export const bottomTabActivateColor = '#e8def7';
+
+// #a5bfcb
+// #0091FF
+// #8f51e2
 
 // #afd6e1: border color
 // #eff8ff: background color top

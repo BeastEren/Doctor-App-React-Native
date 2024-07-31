@@ -3,21 +3,21 @@ import React from 'react'
 import { LinearGradient } from 'expo-linear-gradient'
 import NavBar from '@/components/NavBar'
 import SearchBar from '@/components/SearchBar'
-import { backgroundColorTop, backgroundColorBottom, bottonColor, cardsBackgroundColor, bottomTabActivateColor, borderColor } from '@/constants/Colors'
+import { backgroundColorTop, backgroundColorBottom, cardsBackgroundColor, borderColor } from '@/constants/Colors'
 import Button from '@/components/Button'
 import { router } from 'expo-router'
 export default function login() {
     return (
         <View style={styles.wrapper}>
             <LinearGradient
-                colors={[bottonColor, backgroundColorBottom]}
+                colors={[backgroundColorTop, backgroundColorBottom]}
                 style={styles.topBar}
             >
                 <NavBar />
                 <SearchBar />
             </LinearGradient>
             <LinearGradient
-                colors={[backgroundColorBottom, bottonColor]}
+                colors={[backgroundColorBottom, backgroundColorTop]}
                 style={styles.footBar}
             />
             <View style={styles.logInSetter}>
@@ -53,7 +53,7 @@ export default function login() {
                     }}
                     style={styles.signupText}
                 >
-                    <Text style={{ color: bottonColor }}>Signup</Text>
+                    <Text style={{ color: "#0091FF" }}>Signup</Text>
                 </Pressable>
             </View>
         </View>
@@ -62,13 +62,12 @@ export default function login() {
 
 const styles = StyleSheet.create({
     wrapper: {
-        flex: 1,
-        backgroundColor: backgroundColorTop
+        backgroundColor: 'white',
     },
     topBar: {
         height: 350,
         borderBottomRightRadius: 150,
-        backgroundColor: bottonColor,
+        backgroundColor: '#abd8e8',
     },
     logInSetter: {
         marginTop: -150,
@@ -78,8 +77,8 @@ const styles = StyleSheet.create({
         paddingHorizontal: 20,
         borderRadius: 20,
         width: 325,
-        borderWidth: 1,
-        borderColor: bottomTabActivateColor,
+        borderWidth: 3,
+        borderColor: borderColor,
         backgroundColor: cardsBackgroundColor,
         alignItems: 'center',
         marginBottom: 50,

@@ -3,23 +3,23 @@ import React from 'react'
 import { LinearGradient } from 'expo-linear-gradient'
 import NavBar from '@/components/NavBar'
 import SearchBar from '@/components/SearchBar'
-import { backgroundColorTop, backgroundColorBottom, bottonColor, cardsBackgroundColor, bottomTabActivateColor } from '@/constants/Colors'
+import { backgroundColorTop, backgroundColorBottom, bottonColor, cardsBackgroundColor, borderColor } from '@/constants/Colors'
 import Button from '@/components/Button'
 import { router } from 'expo-router'
 export default function login() {
   return (
     <ScrollView style={styles.wrapper}>
+      <NavBar />
+      <SearchBar />
       <LinearGradient
-        colors={[bottonColor, backgroundColorBottom]}
+        colors={[backgroundColorTop, backgroundColorBottom]}
         style={styles.topBar}
-      >
-        <NavBar />
-        <SearchBar />
-      </LinearGradient>
+      />
       <LinearGradient
-        colors={[backgroundColorBottom, bottonColor]}
+        colors={[backgroundColorBottom, backgroundColorTop]}
         style={styles.footBar}
       />
+
       <View style={styles.logInSetter}>
         <Text style={styles.logo}>SignUp</Text>
 
@@ -54,9 +54,10 @@ export default function login() {
 
 const styles = StyleSheet.create({
   wrapper: {
-    backgroundColor: backgroundColorTop
+    backgroundColor: '#ffff'
   },
   topBar: {
+    marginTop: -150,
     height: 350,
     borderBottomRightRadius: 150,
     backgroundColor: bottonColor,
@@ -69,8 +70,8 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     borderRadius: 20,
     width: 325,
-    borderWidth: 1,
-    borderColor: bottomTabActivateColor,
+    borderWidth: 3,
+    borderColor: borderColor,
     backgroundColor: cardsBackgroundColor,
     alignItems: 'center',
     marginBottom: 50,
@@ -95,7 +96,7 @@ const styles = StyleSheet.create({
     position: 'absolute',
     marginTop: 500,
     width: '100%',
-    height: '43%',
+    height: '44%',
     borderTopLeftRadius: 150,
   }
 })

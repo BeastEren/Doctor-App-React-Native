@@ -34,9 +34,11 @@ export default function NavBar() {
 
 const styles = StyleSheet.create({
     wrapper: {
+        zIndex: 999,
         width: '100%',
         flexDirection: 'row',
         paddingTop: 32,
+        marginBottom: 10,
         justifyContent: 'space-between',
         paddingHorizontal: 20,
     },

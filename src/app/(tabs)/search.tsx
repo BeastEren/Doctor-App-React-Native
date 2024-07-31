@@ -7,7 +7,6 @@ import Button from '@/components/Button';
 import NearbyDoctors from '@/components/NearbyDoctors';
 import SearchDoctorTab from '@/components/SearchDoctorTab';
 import PreviousDoctors from '@/components/PreviousDoctors';
-import Test from '@/components/Test';
 import { backgroundColorBottom, backgroundColorTop } from '@/constants/Colors';
 
 const dataList1 = [
@@ -48,7 +47,6 @@ export default function search() {
                 </View>
 
                 <SearchDoctorTab name='Speciality' dataList={dataList1} icon={Speciality} />
-                {/* <Test name='Location' dataList={dataList2} icon={Location} /> */}
                 <SearchDoctorTab name='Location' dataList={dataList2} icon={Location} />
                 <SearchDoctorTab name='Calendar' dataList={dataList3} icon={Calendar} />
 
