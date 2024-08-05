@@ -1,5 +1,7 @@
 import { StyleSheet, Text, View, } from 'react-native'
 import React from 'react'
+import { LinearGradient } from 'expo-linear-gradient'
+import { backgroundColorBottom, backgroundColorTop, borderColor } from '@/constants/Colors'
 
 type propType = {
   icon: any,
@@ -15,7 +17,10 @@ export default function HealthDetailsCard(prop: propType) {
       {prop.icon}
       <Text style={{ fontSize: prop.fontSizeOfText, fontWeight: 'bold', paddingHorizontal: prop.paddingHorizontalOfText }}>{prop.text}</Text>
       <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#40cbb4' }}>{prop.displayDetail}</Text>
-      <View style={styles.loewTab}></View>
+      <LinearGradient
+        colors={[backgroundColorTop, backgroundColorBottom, borderColor]}
+        style={styles.loewTab}
+      /> 
     </View>
   )
 }
@@ -27,10 +32,10 @@ const styles = StyleSheet.create({
     paddingTop: 20,
     backgroundColor: 'white',
     height: 120,
-    width: 84,
-    borderWidth: 1,
+    width: 86,
+    borderWidth: 2,
     borderRadius: 10,
-    borderColor: 'black'
+    borderColor: borderColor
   },
   loewTab: {
     width: '100%',
