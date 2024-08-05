@@ -27,13 +27,15 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'flex-start',
         backgroundColor: 'white',
-        borderRadius: 15,
+        borderRadius: 25,
         elevation: 15,
+        // borderWidth: 3,
+        // borderColor: '#0091FF',
     },
     iconWrapper: {
         backgroundColor: '#40cbb4',
         padding: 10,
-        borderRadius: 15,
+        borderRadius: 25,
     },
     InputWrapper: {
         padding: 10,
