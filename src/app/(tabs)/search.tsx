@@ -8,6 +8,7 @@ import NearbyDoctors from '@/components/NearbyDoctors';
 import SearchDoctorTab from '@/components/SearchDoctorTab';
 import PreviousDoctors from '@/components/PreviousDoctors';
 import { backgroundColorBottom, backgroundColorTop } from '@/constants/Colors';
+import SearchDoctorDate from '@/components/SearchDoctorDate';
 
 const dataList1 = [
     { value: 'sourav', code: '3123' },
@@ -48,7 +49,8 @@ export default function search() {
 
                 <SearchDoctorTab name='Speciality' dataList={dataList1} icon={Speciality} />
                 <SearchDoctorTab name='Location' dataList={dataList2} icon={Location} />
-                <SearchDoctorTab name='Calendar' dataList={dataList3} icon={Calendar} />
+                {/* <SearchDoctorTab name='Calendar' dataList={dataList3} icon={Calendar} /> */}
+                <SearchDoctorDate name='Calendar'  icon={Calendar} />
 
                 <View style={{ alignItems: 'center' }}>
                     <View style={styles.findDocButton}>
