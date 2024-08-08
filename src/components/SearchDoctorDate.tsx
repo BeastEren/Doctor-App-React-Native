@@ -1,5 +1,7 @@
-import { Pressable, StyleSheet, Text, View, TextInput, FlatList, Modal } from 'react-native';
-import { useRef, useState } from 'react';
+import { Pressable, StyleSheet, Text, View, Modal } from 'react-native';
+import { useState } from 'react';
+import DatePicker from 'react-native-modern-datepicker';
+import { getToday, getFormatedDate } from 'react-native-modern-datepicker';
 
 type propType = {
     name: string,
@@ -8,22 +10,14 @@ type propType = {
 
 export default function SearchDoctorDate(prop: propType) {
 
-    const [selectedData, setSelectedData] = useState('');
+    // const today = new Date();
+    // const startDate = getFormatedDate(today.setDate(today.getDate() + 1), 'YYYY/MM/DD')
+    const [selectedData, setSelectedData] = useState('2024/12/12');
     const [isClicked, setIsClicked] = useState(false);
-    // const [data, setData] = useState(prop.dataList);
-    // const onSearch = (txt: string) => {
-    //     if (txt != '') {
-    //         let tempData = data.filter((item: { value: string; }) => {
-    //             return item.value.toLowerCase().indexOf(txt.toLowerCase()) > -1;
-    //         });
-    //         setData(tempData);
-    //     }
-    //     else {
-    //         setData(prop.dataList);
-    //     }
-    // }
-    // const searchRef = useRef();
 
+    function handleChange(propDate: any) {
+        setSelectedData(propDate)
+    }
     return (
         <View style={styles.wrapper}>
             <Pressable
@@ -39,45 +33,31 @@ export default function SearchDoctorDate(prop: propType) {
                     <Text style={styles.subText}>{selectedData}</Text>
                 </View>
             </Pressable>
-            {/* <Modal
-                animationType='slide'
-                transparent={true}
-                visible={true}
-            >
-                <View style={styles.dropdown}>
-                    <View style={styles.inner}>
-                        <Pressable onPress={() => { setIsClicked(!isClicked) }}>
+            {isClicked ? (
+                <Modal
+                    animationType='slide'
+                    transparent={true}
+                    visible={true}
+                >
+                    <View style={styles.dropdown}>
+                        <DatePicker
+                            mode='calendar'
+                            // minimumDate={startDate}
+                            selected={selectedData}
+                            onDateChange={handleChange}
+                        />
+                        <Pressable
+                            style={styles.canbut}
+                            onPress={() => {
+                                setIsClicked(!isClicked)
+
+                            }}>
                             <Text>Close</Text>
                         </Pressable>
                     </View>
-                </View>
-            </Modal> */}
-            {/* {isClicked ? (
-                <View style={styles.dropdown}>
-                    <TextInput
-                        // ref={searchRef}
-                        placeholder='Search'
-                        style={styles.searchBar}
-                        onChangeText={(txt) => {
-                            onSearch(txt);
-                        }}
-                    />
-                    <FlatList data={data} renderItem={({ item, index }) => {
-                        return (
-                            <Pressable
-                                style={styles.dataItem}
-                                onPress={() => {
-                                    setSelectedData(item.value);
-                                    onSearch('');
-                                    setIsClicked(false);
-                                    // searchRef.current.clear();
-                                }}>
-                                <Text>{item.value}</Text>
-                            </Pressable>
-                        )
-                    }} />
-                </View>
-            ) : null} */}
+                </Modal>) : null}
+
+
         </View>
     )
 }
@@ -106,46 +86,32 @@ const styles = StyleSheet.create({
         borderRadius: 35 / 2,
         backgroundColor: '#f5f5f5'
     },
-    headText: {
-        fontSize: 18,
-        fontWeight: 'bold',
-    },
     subText: {
         fontSize: 16,
         fontWeight: 'bold',
     },
     dropdown: {
-        width: '95%',
+        width: '80%',
         height: 300,
         backgroundColor: 'white',
         elevation: 15,
-        borderRadius: 30,
-        borderWidth: 1,
+        // borderWidth: 3,
         borderColor: '#b1d7e4',
         alignSelf: 'center',
         position: 'absolute',
-        marginTop: 70,
+        marginTop: 320,
         zIndex: 999,
     },
-    searchBar: {
-        width: '90%',
-        height: 50,
-        paddingLeft: 15,
-        marginTop: 20,
-        borderRadius: 20,
-        borderWidth: .5,
+    canbut: {
+        // marginLeft: -3.5,
+        height: 40,
+        // width: '102.5%',
+        width: '100%',
+        marginTop: -5,
+        // borderWidth: 3,
         borderColor: '#b1d7e4',
-        alignSelf: 'center',
-    },
-    dataItem: {
-        width: '80%',
-        height: 50,
-        borderBottomWidth: .2,
-        borderBottomColor: '#b1d7e4',
-        alignSelf: 'center',
-        justifyContent: 'center',
-    },
-    inner: {
-
+        alignItems: 'center',
+        backgroundColor: 'white',
+        // justifyContent: 'center',
     }
 })

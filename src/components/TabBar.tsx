@@ -8,7 +8,7 @@ export function TabBar({ state, descriptors, navigation }: BottomTabBarProps) {
 
     const [dimensions, setDimensions] = useState({ height: 20, width: 100 })
 
-    const buttonWidth = dimensions.width / (state.routes.length - 2);
+    const buttonWidth = dimensions.width / state.routes.length;
 
     const onTabbarLayout = (event: LayoutChangeEvent) => {
         setDimensions({
@@ -33,7 +33,6 @@ export function TabBar({ state, descriptors, navigation }: BottomTabBarProps) {
                 borderRadius: 20,
                 height: dimensions.height - 10,
                 width: buttonWidth,
-                // padding: 10
             }]} />
             {state.routes.map((route, index) => {
                 const { options } = descriptors[route.key];
