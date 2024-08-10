@@ -1,14 +1,23 @@
-// import { StyleSheet, Text, View } from 'react-native'
-// import React from 'react'
+import React from 'react'
+import { createNativeStackNavigator } from '@react-navigation/native-stack'
+import { NavigationContainer } from '@react-navigation/native';
+// import BottomTabNavigation from './BottomTabNavigation';
+import DrawerNavigation from './DrawerNavigation';
 
-// // const Stack = createNativeStackNavigator()
+const Stack = createNativeStackNavigator();
 
-// export default function AppNavigation() {
-//     return (
-//         <View>
-//             <Text>AppNavigation</Text>
-//         </View>
-//     )
-// }
+const AppNavigation = () => {
+    return (
+        <NavigationContainer>
+            <Stack.Navigator
+                screenOptions={{ headerShown: false }}
+                initialRouteName='Main'
+            >
+                <Stack.Screen name="Main" component={DrawerNavigation} />
+            </Stack.Navigator>
+        </NavigationContainer>
+    )
 
-// const styles = StyleSheet.create({})
+}
+
+export default AppNavigation
