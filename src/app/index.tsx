@@ -16,7 +16,6 @@ export default function Index() {
         style={styles.topBar}
       >
         <NavBar />
-        <SearchBar />
       </LinearGradient>
       <LinearGradient
         colors={[backgroundColorBottom, backgroundColorTop]}
@@ -54,6 +53,7 @@ const styles = StyleSheet.create({
   topBar: {
     height: 350,
     borderBottomRightRadius: 150,
+    borderBottomLeftRadius: 90,
     backgroundColor: '#abd8e8',
   },
   footBar: {
@@ -62,13 +62,14 @@ const styles = StyleSheet.create({
     width: '100%',
     height: 350,
     borderTopLeftRadius: 150,
+    borderTopRightRadius: 90,
   },
   messageWrapper: {
     position: 'absolute',
     alignItems: 'center',
     justifyContent: 'center',
     width: '100%',
-    height: 500,
+    height: 400,
   },
   message: {
     fontSize: 22,

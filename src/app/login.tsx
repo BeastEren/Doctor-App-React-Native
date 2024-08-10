@@ -67,6 +67,7 @@ const styles = StyleSheet.create({
         height: 350,
         borderBottomRightRadius: 150,
         backgroundColor: '#abd8e8',
+        borderBottomLeftRadius: 90,
     },
     logInSetter: {
         marginTop: -150,
@@ -120,5 +121,6 @@ const styles = StyleSheet.create({
         width: '100%',
         height: '43%',
         borderTopLeftRadius: 150,
+        borderTopRightRadius: 90,
     }
 })

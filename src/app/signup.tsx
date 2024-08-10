@@ -56,13 +56,14 @@ const styles = StyleSheet.create({
     backgroundColor: '#ffff'
   },
   topBar: {
-    marginTop: -150,
+    marginTop: -100,
     height: 350,
     borderBottomRightRadius: 150,
     backgroundColor: bottonColor,
+    borderBottomLeftRadius: 90,
   },
   logInSetter: {
-    marginTop: -150,
+    marginTop: -210,
     alignSelf: 'center',
     elevation: 40,
     paddingVertical: 30,
@@ -95,7 +96,8 @@ const styles = StyleSheet.create({
     position: 'absolute',
     marginTop: 500,
     width: '100%',
-    height: '44%',
+    height: '55%',
     borderTopLeftRadius: 150,
+    borderTopRightRadius: 90,
   }
 })
