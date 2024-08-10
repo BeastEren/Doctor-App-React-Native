@@ -1,6 +1,6 @@
 import { View, Text, Image, SafeAreaView } from 'react-native'
 import React from 'react'
-import { createDrawerNavigator } from '@react-navigation/drawer'
+import { createDrawerNavigator, DrawerItemList } from '@react-navigation/drawer'
 import { Ionicons } from "@expo/vector-icons"
 import home from '@/app/(tabs)/home'
 import search from '@/app/(tabs)/search'
@@ -24,7 +24,8 @@ const DrawerNavigation = () => {
                 backgroundColor: 'purple'
               }}>
                 <Image
-                  source={''}
+                  source= {require('@/../../assets/images/doc1.jpg')
+                  }
                   style={{
                     height: 100,
                     width: 100,
@@ -67,7 +68,7 @@ const DrawerNavigation = () => {
           title: "Home",
           headerShadowVisible: false,
           drawerIcon: () => (
-            <Ionicons name="home-outline" size={24} color={COLORS.black} /
+            <Ionicons name="home-outline" size={24} color={'black'} />
           )
         }}
         component={home}
@@ -79,7 +80,7 @@ const DrawerNavigation = () => {
           title: "Search",
           headerShadowVisible: false,
           drawerIcon: () => (
-            <Ionicons name="search-outline" size={24} color={COLORS.black} /
+            <Ionicons name="search-outline" size={24} color={'black'} />
           )
         }}
         component={search}
@@ -91,7 +92,7 @@ const DrawerNavigation = () => {
           title: "Profile",
           headerShadowVisible: false,
           drawerIcon: () => (
-            <Ionicons name="home-outline" size={24} color={COLORS.black} /
+            <Ionicons name="home-outline" size={24} color={'black'} />
           )
         }}
         component={profile}

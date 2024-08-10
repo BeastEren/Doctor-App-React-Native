@@ -1,5 +1,6 @@
 import Button from "@/components/Button";
 import NavBar from "@/components/NavBar";
+import AppNavigation from "@/components/navigations/AppNavigation";
 import SearchBar from "@/components/SearchBar";
 import { backgroundColorBottom, backgroundColorTop } from "@/constants/Colors";
 import { LinearGradient } from "expo-linear-gradient";
@@ -9,6 +10,7 @@ import { StyleSheet, Text, View } from "react-native";
 export default function Index() {
   return (
     <View>
+      {/* <AppNavigation /> */}
       <LinearGradient
         colors={[backgroundColorTop, backgroundColorBottom]}
         style={styles.topBar}
@@ -44,6 +46,7 @@ export default function Index() {
           router.push("/signup")
         }} text="Signup" />
       </View>
+
     </View>
   );
 }
